@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        form{
+            padding: 0.5rem;
+            border: 1px solid black;
+            display: inline-block;
+            border-radius: 0.3rem;
+            margin: 2rem;
+        }
+        form>input[type="text"],input[type="submit"],input[type="password"],form>div{
+            display: block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="/validate" method="post">
+        <input type="text" name="name" id="name" placeholder="User">
+        <input type="password" name="pwd" id="pwd" placeholder="Password">
+        <div><label for="dob">DOB: </label><input type="date" name="dob" id="dob"></div>
+        <div>
+            <span>Gender: </span>
+            <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+        </div>
+        <div><label for="remark">Remark: </label><input type="text" name="remark" id="remark"></div>
+        <input type="submit">
+    </form>
+</body>
+</html>
